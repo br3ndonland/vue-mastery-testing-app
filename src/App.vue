@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <app-header />
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -7,6 +8,15 @@
     <router-view />
   </div>
 </template>
+
+<script>
+import AppHeader from "@/components/AppHeader"
+export default {
+  components: {
+    AppHeader,
+  },
+}
+</script>
 
 <style>
 #app {

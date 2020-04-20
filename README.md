@@ -8,25 +8,25 @@ Vue CLI 4 app for [Vue Mastery unit testing course](https://www.vuemastery.com/c
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Compile and hot-reload for development
 
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Compile and minify for production
 
 ```
 npm run build
 ```
 
-### Run your unit tests
+### Run unit tests
 
 ```
 npm run test:unit
 ```
 
-### Lints and fixes files
+### Lint and fix files
 
 ```
 npm run lint

@@ -1,5 +1,7 @@
 # vue-mastery-testing-app
 
+![Install, build, format, and test](https://github.com/br3ndonland/vue-mastery-testing-app/workflows/Install,%20build,%20format,%20and%20test/badge.svg)
+
 Vue CLI 4 app for [Vue Mastery unit testing course](https://www.vuemastery.com/courses/unit-testing/what-to-test)
 
 ## Project setup

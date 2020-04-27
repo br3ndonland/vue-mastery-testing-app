@@ -4,6 +4,8 @@
 
 Vue CLI 4 app for [Vue Mastery unit testing course](https://www.vuemastery.com/courses/unit-testing/what-to-test)
 
+Notes in [br3ndonland/vue-mastery-notes](https://github.com/br3ndonland/vue-mastery-notes)
+
 ## Project setup
 
 ```

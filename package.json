@@ -28,7 +28,8 @@
     "yorkie": "^2.0.0"
   },
   "gitHooks": {
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged",
+    "pre-push": "npm run build && npm run lint && npm run test:unit"
   },
   "lint-staged": {
     "*": [

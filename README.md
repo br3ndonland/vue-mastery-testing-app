@@ -55,4 +55,4 @@ Vue CLI v4.3.0
 ? Save this as a preset for future projects? (y/N) N
 ```
 
-When [Prettier](https://prettier.io/) is selected, Vue CLI also includes ESLint, which is unnecessary. Some additional configuration is needed to remove ESLint. See commit c1889ec862f29d87905d5f7be70819ed2df73081 for details on removal of ESLint.
+When [Prettier](https://prettier.io/) is selected, Vue CLI also includes ESLint, which is unnecessary. Some additional configuration is needed to remove ESLint. See commit [`c1889ec`](https://github.com/br3ndonland/vue-mastery-testing-app/commit/c1889ec862f29d87905d5f7be70819ed2df73081) for details on removal of ESLint.

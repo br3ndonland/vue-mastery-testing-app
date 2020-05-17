@@ -7,14 +7,15 @@ describe("LoginForm", () => {
     // 1. Find text input
     const input = wrapper.find(`[data-testid="input-name"]`)
     // 2. Set value for text input
-    input.setValue("Dennis Nedry")
+    const testName = "Dennis Nedry"
+    input.setValue(testName)
     // 3. Simulate form submission
     wrapper.trigger("submit")
     // 4. Assert event has been emitted
     const emitNameInput = wrapper.emitted("formSubmitted")
     expect(emitNameInput).toHaveLength(1)
     // 5. Assert payload is correct
-    const expectedPayload = { name: "Dennis Nedry" }
+    const expectedPayload = { name: testName }
     expect(wrapper.emitted("formSubmitted")[0][0]).toMatchObject(
       expectedPayload
     )

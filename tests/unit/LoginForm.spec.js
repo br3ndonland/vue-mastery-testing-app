@@ -11,6 +11,12 @@ describe("LoginForm", () => {
     // 3. Simulate form submission
     wrapper.trigger("submit")
     // 4. Assert event has been emitted
+    const emitNameInput = wrapper.emitted("formSubmitted")
+    expect(emitNameInput).toHaveLength(1)
     // 5. Assert payload is correct
+    const expectedPayload = { name: "Dennis Nedry" }
+    expect(wrapper.emitted("formSubmitted")[0][0]).toMatchObject(
+      expectedPayload
+    )
   })
 })

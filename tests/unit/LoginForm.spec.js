@@ -9,6 +9,7 @@ describe("LoginForm", () => {
     // 2. Set value for text input
     input.setValue("Dennis Nedry")
     // 3. Simulate form submission
+    wrapper.trigger("submit")
     // 4. Assert event has been emitted
     // 5. Assert payload is correct
   })

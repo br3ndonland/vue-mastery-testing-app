@@ -11,8 +11,12 @@ describe("MessageDisplay", () => {
     const wrapper = mount(MessageDisplay)
     // 2. Await promise resolution
     await flushPromises()
-    // 3. Assert that API call happened once: `expect()`
-    // 4. Assert that component displays message: `expect()`
+    // 3. Assert that API call happened once
+    expect(getMessage).toHaveBeenCalledTimes(1)
+    // 4. Assert that component displays message
+    const messageContent = wrapper.find(`[data-testid="message"]`).element
+      .textContent
+    expect(messageContent).toEqual(mockMessage)
   })
   it("displays an error if getMessage fails", async () => {
     // 1. Mock API call
@@ -21,7 +25,11 @@ describe("MessageDisplay", () => {
     const wrapper = mount(MessageDisplay)
     // 2. Await promise resolution
     await flushPromises()
-    // 3. Assert that API call happened once: `expect()`
-    // 4. Assert that component displays message: `expect()`
+    // 3. Assert that API call happened once
+    expect(getMessage).toHaveBeenCalledTimes(1)
+    // 4. Assert that component displays message
+    const errorContent = wrapper.find(`[data-testid="message-error"]`).element
+      .textContent
+    expect(errorContent).toEqual(mockError)
   })
 })

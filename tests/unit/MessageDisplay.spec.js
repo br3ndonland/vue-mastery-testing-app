@@ -3,6 +3,11 @@ import { getMessage } from "@/services/axios"
 import flushPromises from "flush-promises"
 import MessageDisplay from "@/components/MessageDisplay.vue"
 
+jest.mock("@/services/axios")
+beforeEach(() => {
+  jest.clearAllMocks()
+})
+
 describe("MessageDisplay", () => {
   it("calls getMessage and displays message", async () => {
     // 1. Mock API call

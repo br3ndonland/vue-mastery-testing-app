@@ -35,6 +35,6 @@ describe("MessageDisplay", () => {
     // 4. Assert that component displays message
     const errorContent = wrapper.find(`[data-testid="message-error"]`).element
       .textContent
-    expect(errorContent).toEqual(mockError)
+    expect(errorContent).toContain(mockError)
   })
 })

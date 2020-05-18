@@ -1,5 +1,6 @@
 import { mount } from "@vue/test-utils"
 import { getMessage } from "@/services/axios"
+import flushPromises from "flush-promises"
 import MessageDisplay from "@/components/MessageDisplay.vue"
 
 describe("MessageDisplay", () => {
@@ -9,6 +10,7 @@ describe("MessageDisplay", () => {
     getMessage.mockResolvedValueOnce({ text: mockMessage })
     const wrapper = mount(MessageDisplay)
     // 2. Await promise resolution
+    await flushPromises()
     // 3. Assert that API call happened once: `expect()`
     // 4. Assert that component displays message: `expect()`
   })
@@ -18,6 +20,7 @@ describe("MessageDisplay", () => {
     getMessage.mockRejectedValueOnce(mockError)
     const wrapper = mount(MessageDisplay)
     // 2. Await promise resolution
+    await flushPromises()
     // 3. Assert that API call happened once: `expect()`
     // 4. Assert that component displays message: `expect()`
   })

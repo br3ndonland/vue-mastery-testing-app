@@ -1,5 +1,5 @@
 <template>
-  <p v-if="error" data-testid="message-error">{{ error }}</p>
+  <p v-if="error" class="error" data-testid="message-error">{{ error }}</p>
   <p v-else data-testid="message">{{ message.text }}</p>
 </template>
 <script>
@@ -15,10 +15,13 @@ export default {
     try {
       this.message = await getMessage()
     } catch (e) {
-      this.error = `Error: ${e}`
-      throw Error(e)
+      this.error = e.message
     }
   },
 }
 </script>
-<style scoped></style>
+<style scoped>
+.error {
+  color: red;
+}
+</style>

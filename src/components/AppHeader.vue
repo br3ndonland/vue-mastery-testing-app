@@ -1,26 +1,21 @@
 <template>
   <div>
     <button v-show="loggedIn">Logout</button>
+    <message-display />
   </div>
 </template>
 
 <script>
-// import OtherComponent from "OtherComponent.vue"
-// import { Mixin } from "mixins/Mixin.js"
+import MessageDisplay from "@/components/MessageDisplay.vue"
 export default {
-  name: "AppHeader",
-  components: {},
-  mixins: [],
-  props: {},
+  components: {
+    "message-display": MessageDisplay,
+  },
   data() {
     return {
       loggedIn: false,
     }
   },
-  computed: {},
-  watch: {},
-  created() {},
-  methods: {},
 }
 </script>
 

@@ -15,7 +15,8 @@ export default {
     try {
       this.message = await getMessage()
     } catch (e) {
-      this.error = e.message
+      const errorDetails = `getMessage could not connect to the database.`
+      this.error = `Error: ${errorDetails}`
     }
   },
 }

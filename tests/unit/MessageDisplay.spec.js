@@ -25,7 +25,7 @@ describe("MessageDisplay", () => {
   })
   it("displays an error if getMessage fails", async () => {
     // 1. Mock API call
-    const mockError = "getMessage failed to return the expected response."
+    const mockError = "getMessage could not connect to the database."
     getMessage.mockRejectedValueOnce(mockError)
     const wrapper = mount(MessageDisplay)
     // 2. Await promise resolution

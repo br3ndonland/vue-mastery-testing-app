@@ -22,7 +22,7 @@
     "@vue/cli-plugin-unit-jest": "~4.3.0",
     "@vue/cli-plugin-vuex": "~4.3.0",
     "@vue/cli-service": "~4.3.0",
-    "@vue/test-utils": "1.0.0-beta.31",
+    "@vue/test-utils": "^1.0.0-beta.31",
     "flush-promises": "^1.0.2",
     "json-server": "^0.16.1",
     "lint-staged": "^9.5.0",

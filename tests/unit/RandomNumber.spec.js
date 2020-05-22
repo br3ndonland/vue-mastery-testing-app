@@ -8,8 +8,7 @@ describe("RandomNumber", () => {
   })
   it("generates a number between min and max after button click", async () => {
     const wrapper = mount(RandomNumber)
-    wrapper.find("button").trigger("click")
-    await wrapper.vm.$nextTick()
+    await wrapper.find("button").trigger("click")
     const randomNumber = parseInt(wrapper.find("span").element.textContent)
     expect(randomNumber).toBeGreaterThanOrEqual(1)
     expect(randomNumber).toBeLessThanOrEqual(10)
@@ -21,8 +20,7 @@ describe("RandomNumber", () => {
         max: 300,
       },
     })
-    wrapper.find("button").trigger("click")
-    await wrapper.vm.$nextTick()
+    await wrapper.find("button").trigger("click")
     const randomNumber = parseInt(wrapper.find("span").element.textContent)
     expect(randomNumber).toBeGreaterThanOrEqual(200)
     expect(randomNumber).toBeLessThanOrEqual(300)

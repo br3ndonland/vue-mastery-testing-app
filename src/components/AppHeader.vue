@@ -1,15 +1,15 @@
 <template>
   <div>
     <button v-show="loggedIn">Logout</button>
-    <message-display />
+    <message-container />
   </div>
 </template>
 
 <script>
-import MessageDisplay from "@/components/MessageDisplay.vue"
+import MessageContainer from "@/components/MessageContainer.vue"
 export default {
   components: {
-    "message-display": MessageDisplay,
+    "message-container": MessageContainer,
   },
   data() {
     return {
